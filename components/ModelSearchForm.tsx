@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-
+import React, { useState, useEffect, useRef } from "react";
 
 const ChevronDownIcon: React.FC = () => (
   <svg
@@ -43,9 +42,9 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
         setIsOpen(false);
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -78,7 +77,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
             >
               <span
                 className={`block truncate ${
-                  value === option ? 'font-semibold' : 'font-normal'
+                  value === option ? "font-semibold" : "font-normal"
                 }`}
               >
                 {option}
@@ -92,24 +91,23 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
 };
 
 const CarResearchForm: React.FC = () => {
-  const makes: string[] = ['Sabaru', 'Toyota', 'Honda', 'Ford', 'BMW'];
+  const makes: string[] = ["Sabaru", "Toyota", "Honda", "Ford", "BMW"];
   const modelsByMake: { [key: string]: string[] } = {
-    Sabaru: ['Forester Hybrid', 'Crosstrek', 'Outback', 'Impreza'],
-    Toyota: ['RAV4 Hybrid', 'Camry', 'Corolla', 'Highlander'],
-    Honda: ['CR-V Hybrid', 'Civic', 'Accord', 'Pilot'],
-    Ford: ['Escape Hybrid', 'Mustang', 'F-150', 'Explorer'],
-    BMW: ['X5', '3 Series', '5 Series', 'X3'],
+    Sabaru: ["Forester Hybrid", "Crosstrek", "Outback", "Impreza"],
+    Toyota: ["RAV4 Hybrid", "Camry", "Corolla", "Highlander"],
+    Honda: ["CR-V Hybrid", "Civic", "Accord", "Pilot"],
+    Ford: ["Escape Hybrid", "Mustang", "F-150", "Explorer"],
+    BMW: ["X5", "3 Series", "5 Series", "X3"],
   };
-  const years: string[] = ['All years', '2024', '2023', '2022', '2021', '2020'];
+  const years: string[] = ["All years", "2024", "2023", "2022", "2021", "2020"];
 
-  const [selectedMake, setSelectedMake] = useState<string>('Sabaru');
-  const [selectedModel, setSelectedModel] =
-    useState<string>('Forester Hybrid');
-  const [selectedYear, setSelectedYear] = useState<string>('All years');
+  const [selectedMake, setSelectedMake] = useState<string>("Sabaru");
+  const [selectedModel, setSelectedModel] = useState<string>("Forester Hybrid");
+  const [selectedYear, setSelectedYear] = useState<string>("All years");
 
   return (
     <div
-      className="flex w-full flex-col  rounded-lg border border-gray-300 bg-white
+      className="flex w-full flex-col  rounded-lg border border-r-0 border-gray-300 bg-white
                  md:flex-row"
     >
       <div className="flex-1 p-4">
@@ -144,7 +142,7 @@ const CarResearchForm: React.FC = () => {
 
       <button
         type="submit"
-        className="cursor-pointer bg-gradient-to-r from-[#004D40] via-[#008080] to-[#00BCD4] p-4 text-center font-bold text-black transition-colors hover:bg-opacity-90 md:px-10"
+        className="cursor-pointer bg-[#008080] p-4 text-center text-white rounded-lg rounded-l-none font-bold transition-colors hover:bg-opacity-90 md:px-10"
       >
         Search
       </button>

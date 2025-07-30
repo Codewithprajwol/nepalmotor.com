@@ -1,3 +1,4 @@
+"use client";
 import { CarDetails } from "@/types";
 import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -23,9 +24,8 @@ const CarCarousel = ({ cars }: carCarouselProps) => {
     setSwiperReady(true);
   }, []);
   const buttonBaseClass =
-  "absolute z-10 top-1/3 w-12 h-12 flex items-center justify-center rounded-full cursor-pointer transition-all duration-300 ease-in-out";
-  
-  
+    "absolute z-10 top-1/3 w-12 h-12 flex items-center justify-center rounded-full cursor-pointer transition-all duration-300 ease-in-out";
+
   return (
     <div className="relative  py-8">
       <div
@@ -48,7 +48,7 @@ const CarCarousel = ({ cars }: carCarouselProps) => {
     ${buttonBaseClass}
     -left-10
     // Style (subtle by default)
-    bg-gray-900/0 text-gray-900/50 
+    bg-gray-900/0 text-gray-900/50
     // Interaction (comes to life on hover)
     hover:bg-gray-900/100 hover:text-white hover:shadow-xl hover:scale-110
   `}

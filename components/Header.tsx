@@ -1,30 +1,34 @@
-'use client'
+"use client";
 
-import { MenuIcon } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
-import SideMenu from './SideMenu';
-import { usePathname } from 'next/navigation'; 
+import { MenuIcon } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import SideMenu from "./SideMenu";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const pathname = usePathname(); 
+  const pathname = usePathname();
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
   return (
-    <header className={`w-full bg-gradient-to-r from-gray-700 to-gray-900 sticky top-0 z-50 lg:bg-[#626568] backdrop-blur-md transition-opacity duration-300 ${
-        isScrolled ? 'opacity-85' : 'opacity-100'
-      }`}>
-      <div className={`max-w-screen-2xl mx-auto w-full py-4 flex items-center justify-between px-4 md:px-6 lg:px-16`}>
+    <header
+      className={`w-full bg-gradient-to-r from-gray-700 to-gray-900 sticky top-0 z-50 lg:bg-[#626568] backdrop-blur-md transition-opacity duration-300 ${
+        isScrolled ? "opacity-85" : "opacity-100"
+      }`}
+    >
+      <div
+        className={`max-w-screen-2xl mx-auto w-full py-4 flex items-center justify-between px-4 md:px-6 lg:px-16`}
+      >
         {/* Hamburger Menu (Mobile) */}
         <button
           className="md:hidden flex items-center mr-2 focus:outline-none"
@@ -36,7 +40,12 @@ const Header = () => {
 
         {/* Logo Section */}
         <Link href="/" className="flex items-center">
-          <Image src={'/MainLogo.png'} alt="Nepal Motor Logo" width={40} height={40} />
+          <Image
+            src={"/MainLogo.png"}
+            alt="Nepal Motor Logo"
+            width={40}
+            height={40}
+          />
           <span className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold ml-2 sm:ml-3">
             Nepal Motor
           </span>
@@ -48,15 +57,19 @@ const Header = () => {
             <Link
               href="/"
               className={`text-sm md:text-base font-semibold transition-colors ${
-                pathname === '/' ? 'text-[#008080]' : 'text-white hover:text-[#008080]'
+                pathname === "/"
+                  ? "text-[#008080]"
+                  : "text-white hover:text-[#008080]"
               }`}
             >
               Home
             </Link>
-              <Link
+            <Link
               href="/sellcars"
               className={`text-sm md:text-base font-semibold transition-colors ${
-                pathname === '/sellcars' ? 'text-[#008080]' : 'text-white hover:text-[#008080]'
+                pathname === "/sellcars"
+                  ? "text-[#008080]"
+                  : "text-white hover:text-[#008080]"
               }`}
             >
               Sell Old Cars
@@ -64,12 +77,14 @@ const Header = () => {
             <Link
               href="/buy"
               className={`text-sm md:text-base font-semibold transition-colors ${
-                pathname === '/buy' ? 'text-[#008080]' : 'text-white hover:text-[#008080]'
+                pathname === "/buy"
+                  ? "text-[#008080]"
+                  : "text-white hover:text-[#008080]"
               }`}
             >
               Buy Old Cars
             </Link>
-          
+
             {/* <Link
               href="/rent"
               className={`text-sm md:text-base font-semibold transition-colors ${
@@ -81,7 +96,9 @@ const Header = () => {
             <Link
               href="/about"
               className={`text-sm md:text-base font-semibold transition-colors ${
-                pathname === '/about' ? 'text-[#008080]' : 'text-white hover:text-[#008080]'
+                pathname === "/about"
+                  ? "text-[#008080]"
+                  : "text-white hover:text-[#008080]"
               }`}
             >
               About Us

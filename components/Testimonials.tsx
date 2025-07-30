@@ -51,7 +51,7 @@ const Testimonials = () => {
   return (
     <section className="bg-white w-full pt-10 pb-10 sm:pb-20">
       <div className="max-w-screen-2xl w-full mx-auto px-6 lg:px-8">
-        <h1 className="text-center pb-10 text-4xl font-bold tracking-tight text-slate-800 sm:text-5xl  ">
+        <h1 className="text-center pb-10 text-4xl font-bold tracking-tight text-[#00594F] sm:text-5xl  ">
           Testimonials
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

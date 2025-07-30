@@ -1,7 +1,7 @@
 // src/components/BlogSection.tsx
 
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 // A helper component for the Calendar icon
 const CalendarIcon = ({ className }: { className: string }) => (
@@ -44,40 +44,51 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    category: { name: 'Rent Tips', color: 'bg-red-500' },
+    category: { name: "Rent Tips", color: "bg-red-500" },
     // Placeholder image. Replace with your own.
-    imageUrl: '/offroadinghimalayas.jpg',
-    title: 'A Guide to Renting the Perfect car for Your Himalayan Adventure',
-    excerpt: 'Planning a trip to the mountains? Here are essential tips for choosing, inspecting, and renting a reliable car in Nepal to ensure a safe and memorable journey.',
-    author: { name: 'Sunil Gurung', avatarUrl: 'https://i.pravatar.cc/150?u=prajwolshrestha' },
-    date: '10 March 2024',
-    cardBgColor: 'bg-white',
-    readMoreColor: 'text-orange-500 hover:text-orange-600',
+    imageUrl: "/offroadinghimalayas.jpg",
+    title: "A Guide to Renting the Perfect car for Your Himalayan Adventure",
+    excerpt:
+      "Planning a trip to the mountains? Here are essential tips for choosing, inspecting, and renting a reliable car in Nepal to ensure a safe and memorable journey.",
+    author: {
+      name: "Sunil Gurung",
+      avatarUrl: "https://i.pravatar.cc/150?u=prajwolshrestha",
+    },
+    date: "10 March 2024",
+    cardBgColor: "bg-white",
+    readMoreColor: "text-orange-500 hover:text-orange-600",
   },
   {
     id: 2,
-    category: { name: 'News', color: 'bg-slate-800' },
+    category: { name: "News", color: "bg-slate-800" },
     // Placeholder image. Replace with your own.
-    imageUrl: '/suvcar.jpg',
-    title: 'Top 5 Family-Friendly SUVs for Navigating Kathmandu\'s Streets',
-    excerpt: 'From handling challenging road conditions to providing comfort for the whole family, we review the best SUVs available for purchase or rent in the valley.',
-    author: { name: 'Anjali Thapa', avatarUrl: 'https://i.pravatar.cc/150?u=anjalithapa' },
-    date: '12 March 2024',
-    cardBgColor: 'bg-slate-50',
-    readMoreColor: 'text-gray-500 hover:text-gray-700',
+    imageUrl: "/suvcar.jpg",
+    title: "Top 5 Family-Friendly SUVs for Navigating Kathmandu's Streets",
+    excerpt:
+      "From handling challenging road conditions to providing comfort for the whole family, we review the best SUVs available for purchase or rent in the valley.",
+    author: {
+      name: "Anjali Thapa",
+      avatarUrl: "https://i.pravatar.cc/150?u=anjalithapa",
+    },
+    date: "12 March 2024",
+    cardBgColor: "bg-slate-50",
+    readMoreColor: "text-gray-500 hover:text-gray-700",
   },
-{
+  {
     id: 3,
-    category: { name: 'Automotive', color: 'bg-indigo-800' },
-    imageUrl: '/evcarsinnepal.jpg',
-    title: 'The Rise of Electric Vehicles in Nepal: What You Need to Know',
-    excerpt: 'With growing environmental concerns, EV adoption is gaining momentum in Nepal. We explore the challenges, benefits, and the future of electric cars in the country.',
-    author: { name: 'Pooja Sharma', avatarUrl: 'https://i.pravatar.cc/150?u=poojasharma' },
-    date: '25 July 2024',
-    cardBgColor: 'bg-indigo-50',
-    readMoreColor: 'text-indigo-500 hover:text-indigo-700',
-}
-
+    category: { name: "Automotive", color: "bg-indigo-800" },
+    imageUrl: "/evcarsinnepal.jpg",
+    title: "The Rise of Electric Vehicles in Nepal: What You Need to Know",
+    excerpt:
+      "With growing environmental concerns, EV adoption is gaining momentum in Nepal. We explore the challenges, benefits, and the future of electric cars in the country.",
+    author: {
+      name: "Pooja Sharma",
+      avatarUrl: "https://i.pravatar.cc/150?u=poojasharma",
+    },
+    date: "25 July 2024",
+    cardBgColor: "bg-indigo-50",
+    readMoreColor: "text-indigo-500 hover:text-indigo-700",
+  },
 ];
 
 const BlogSection = () => {
@@ -86,7 +97,7 @@ const BlogSection = () => {
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center">
-          <h2 className="mt-2 text-3xl font-bold uppercase tracking-tight text-slate-800 sm:text-4xl">
+          <h2 className="mt-2 text-3xl font-bold uppercase tracking-tight text-[#00594F] sm:text-4xl">
             Our Recently Post
           </h2>
           <p className="font-semibold text-[#93A17A] uppercase tracking-wider">
