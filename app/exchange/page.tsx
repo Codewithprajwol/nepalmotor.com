@@ -340,7 +340,6 @@ const VehicleValuationForm: FC = () => {
     console.log("Submitting Form Data:", formData);
     await exchangeEvSubmit(formData);
 
-    // await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate API call
   };
 
   useEffect(() => {
@@ -359,7 +358,7 @@ const VehicleValuationForm: FC = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    // handleReset(); // Reset form when closing modal
+    handleReset(); // Reset form when closing modal
   };
 
   // Options for select dropdowns
