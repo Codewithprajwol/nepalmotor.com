@@ -68,7 +68,7 @@ const Testimonials = () => {
             <div className="mt-10">
               <Link
                 href="/testimonials"
-                className="inline-block rounded-md bg-button px-8 py-4 text-base font-semibold group text-white shadow-sm hover:bg-gray-700 transition-all duration-500 transform hover:-translate-y-1 ease-out "
+                className="inline-block rounded-md bg-[#008080] px-8 py-4 text-base font-semibold group text-white shadow-sm hover:bg-gray-700 transition-all duration-500 transform hover:-translate-y-1 ease-out "
               >
                 Discover More{" "}
                 <MoveRightIcon className="inline-block ml-2 group-hover:translate-x-1 transition-all duration-400" />
@@ -81,7 +81,7 @@ const Testimonials = () => {
             {testimonialsData.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className={`${testimonial.bgColor} ${testimonial.shadow} rounded-xl p-8`}
+                className={`${testimonial.shadow} rounded-xl p-8`}
               >
                 <div className="flex items-start gap-4">
                   <Image
@@ -111,9 +111,6 @@ const Testimonials = () => {
                       <StarIcon key={i} className="h-5 w-5 text-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-sm font-semibold text-slate-600">
-                    {testimonial.rating.toFixed(1)} / 5.0
-                  </p>
                 </div>
               </div>
             ))}

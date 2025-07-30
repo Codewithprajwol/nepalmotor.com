@@ -172,9 +172,9 @@ type CarTabsProps = {
 
 export function CarTabsSection({ viewAll, type }: CarTabsProps) {
   return (
-    <div className="w-full  mx-auto px-2 md:px-6 lg:px-8 py-8 bg-[#F3F4F6] ">
+    <div className="w-full mx-auto px-2 md:px-6 lg:px-8 py-8 bg-[#F3F4F6]">
       <div className="max-w-screen-2xl mx-auto">
-        <h4 className="text-2xl text-center md:text-3xl mb-5 font-semibold py-5  text-[#00594F]">
+        <h4 className="text-2xl text-center md:text-3xl mb-5 font-semibold py-5 text-[#004D40]">
           Best Seller Cars
         </h4>
         <div className="flex w-full justify-center md:justify-around gap-6 border-b">
@@ -185,10 +185,10 @@ export function CarTabsSection({ viewAll, type }: CarTabsProps) {
               scroll={false}
               href={`?type=${tab}`}
               key={tab}
-              className={`pb-2 cursor-pointer  ${
+              className={`pb-2 cursor-pointer transition-colors ${
                 tab == type
-                  ? "border-b-2 border-gray-500 text-black font-semibold"
-                  : "text-gray-500"
+                  ? "border-b-2 border-[#00F3FF] text-[#008080] font-semibold"
+                  : "text-[#004D40] hover:text-[#008080]"
               }`}
               // onClick={() => handleTabClick(tab)}
             >
@@ -197,7 +197,7 @@ export function CarTabsSection({ viewAll, type }: CarTabsProps) {
           ))}
         </div>
         {/* carshow section */}
-        <div className=" p-4 ">
+        <div className="p-4">
           {viewAll ? (
             <CarGrid cars={carData[type]} />
           ) : (
@@ -208,7 +208,7 @@ export function CarTabsSection({ viewAll, type }: CarTabsProps) {
           <Link
             replace
             href={`?type=${type}&viewAll=true`}
-            className="text-left cursor-pointer text-gray-500 py-5"
+            className="text-left cursor-pointer text-[#008080] hover:text-[#00F3FF] py-5 transition-colors"
             scroll={false}
           >
             view all cars <ChevronRight className="inline" size={24} />

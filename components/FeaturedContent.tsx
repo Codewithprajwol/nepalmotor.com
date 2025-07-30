@@ -24,7 +24,7 @@ const FeaturedContent: React.FC = () => {
             <div className="flex justify-center items-center px-4">
               {/* Single image for all logos */}
               {/* <Image
-            src={'/featuredImage/featuredLogos.png'} 
+            src={'/featuredImage/featuredLogos.png'}
             alt="Featured publications logos"
             width={1200}
             height={60}
@@ -68,10 +68,7 @@ const FeaturedContent: React.FC = () => {
                   </Link>
                   <Link
                     href="/exchange"
-                    className="px-6 py-3 cursor-pointer text-white font-semibold rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-150 ease-in-out w-full sm:w-auto exchange-btn"
-                    style={{
-                      backgroundColor: "#00F3FF",
-                    }}
+                    className="px-6 py-3 bg-[#008080] cursor-pointer text-white font-semibold rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-150 ease-in-out w-full sm:w-auto exchange-btn"
                   >
                     Exchange To Ev
                   </Link>

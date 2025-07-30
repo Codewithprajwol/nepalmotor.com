@@ -51,7 +51,7 @@ const vehicles: Vehicles = [
 const NewArrivalCars = () => {
   return (
     <section className="w-full pb-10">
-      <h2 className="text-xl text-[#00594F] md:text-2xl text-center font-bold mb-6 pt-5">
+      <h2 className="text-xl text-[#004D40] md:text-2xl text-center font-bold mb-6 pt-5">
         New Arrivals
       </h2>
       {/* <div className="flex flex-wrap gap-6 justify-center ">
@@ -84,9 +84,9 @@ const NewArrivalCars = () => {
             <Link
               key={v.label}
               href={v.href}
-              className="block w-48 bg-white rounded-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300"
+              className="block w-48 bg-white rounded-lg border border-gray-200 hover:shadow-xl hover:border-[#00F3FF] transition-all duration-300"
             >
-              <div className="w-full  flex items-center justify-center">
+              <div className="w-full flex items-center justify-center">
                 <Image
                   src={v.img}
                   alt={v.label}
@@ -96,10 +96,10 @@ const NewArrivalCars = () => {
                 />
               </div>
               <div className="px-4 pb-2">
-                <h3 className="text-lg font-semibold tracking-tight text-[#00594F]">
+                <h3 className="text-lg font-semibold tracking-tight text-[#004D40] group-hover:text-[#008080] transition-colors">
                   {v.label}
                 </h3>
-                <p className="mt-1 font-normal text-sm text-gray-600">
+                <p className="mt-1 font-normal text-sm text-[#008080]">
                   {v.price}
                 </p>
               </div>

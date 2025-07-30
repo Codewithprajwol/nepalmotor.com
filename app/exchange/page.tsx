@@ -21,7 +21,7 @@ interface OptionType {
 
 const useOnClickOutside = <T extends HTMLElement>(
   ref: RefObject<T>,
-  handler: (event: MouseEvent | TouchEvent) => void
+  handler: (event: MouseEvent | TouchEvent) => void,
 ) => {
   useEffect(() => {
     const listener = (event: MouseEvent | TouchEvent) => {
@@ -302,7 +302,7 @@ const VehicleValuationForm: FC = () => {
   const [formData, setFormData] = useState<FormDataState>(initialFormState);
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value, type } = e.target;
     // Restrict phone to 10 digits and makeYear to 4 digits
@@ -454,7 +454,7 @@ const VehicleValuationForm: FC = () => {
 
         {/* Form Container */}
         <div className="relative shadow-2xl overflow-hidden p-2 sm:p-4 md:p-8 lg:p-16 flex justify-center">
-          <div className="w-full max-w-3xl bg-white border border-gray-200 rounded-2xl shadow-xl p-8 md:p-12">
+          <div className="w-full max-w-10/12 bg-white border border-gray-200 rounded-2xl shadow-xl p-8 md:p-12">
             <form className="w-full">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
                 {/* 1. Section Headings */}
