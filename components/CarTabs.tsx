@@ -185,7 +185,7 @@ export function CarTabsSection({ viewAll, type }: CarTabsProps) {
               scroll={false}
               href={`?type=${tab}`}
               key={tab}
-              className={`pb-2 cursor-pointer transition-colors ${
+              className={`pb-2 cursor-pointer transition-colors  ${
                 tab == type
                   ? "border-b-2 border-[#00F3FF] text-[#008080] font-semibold"
                   : "text-[#004D40] hover:text-[#008080]"

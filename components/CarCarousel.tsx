@@ -107,7 +107,7 @@ const CarCarousel = ({ cars }: carCarouselProps) => {
         >
           {cars.map((car, index) => (
             <SwiperSlide key={index} className="py-2">
-              <div key={index} className="rounded-md shadow-sm p-4 ">
+              <div key={index} className="rounded-md shadow-sm p-4 bg-white">
                 <img
                   src={car.image}
                   alt={car.name}

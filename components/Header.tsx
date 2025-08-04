@@ -65,9 +65,9 @@ const Header = () => {
               Home
             </Link>
             <Link
-              href="/sellcars"
+              href="/sell"
               className={`text-sm md:text-base font-semibold transition-colors ${
-                pathname === "/sellcars"
+                pathname === "/sell"
                   ? "text-[#00F3FF]"
                   : "text-white hover:text-[#00F3FF]"
               }`}

@@ -7,7 +7,7 @@ const ChevronDownIcon: React.FC = () => (
     viewBox="0 0 24 24"
     strokeWidth={2.5}
     stroke="currentColor"
-    className="h-5 w-5 text-gray-400"
+    className="h-5 w-5 text-[#008080]"
   >
     <path
       strokeLinecap="round"
@@ -55,11 +55,13 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
 
   return (
     <div className="relative h-full" ref={selectRef}>
-      <label className="block text-xs font-medium text-gray-500">{label}</label>
+      <label className="block text-xs font-medium text-[#004D40]">
+        {label}
+      </label>
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="relative mt-1 w-full cursor-pointer border-0 bg-transparent p-0 text-left text-base font-medium text-gray-900 focus:outline-none"
+        className="relative mt-1 w-full cursor-pointer border-0 bg-transparent p-0 text-left text-base font-medium text-[#004D40] focus:outline-none hover:text-[#008080] transition-colors"
       >
         <span className="block truncate">{value}</span>
         <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
@@ -68,16 +70,18 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
       </button>
 
       {isOpen && (
-        <div className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white p-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none">
+        <div className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-lg bg-white p-1 text-base shadow-xl ring-1 ring-[#008080]/10 border border-[#008080]/20 focus:outline-none">
           {options.map((option) => (
             <div
               key={option}
               onClick={() => handleOptionClick(option)}
-              className="cursor-pointer select-none  rounded-lg py-2 px-3 text-gray-900 hover:bg-gray-100"
+              className="cursor-pointer select-none rounded-lg py-2 px-3 text-[#004D40] hover:bg-[#00F3FF]/10 hover:text-[#008080] transition-all duration-150"
             >
               <span
                 className={`block truncate ${
-                  value === option ? "font-semibold" : "font-normal"
+                  value === option
+                    ? "font-semibold text-[#008080]"
+                    : "font-normal"
                 }`}
               >
                 {option}
@@ -107,7 +111,7 @@ const CarResearchForm: React.FC = () => {
 
   return (
     <div
-      className="flex w-full flex-col  rounded-lg border border-r-0 border-gray-300 bg-white
+      className="flex w-full flex-col rounded-lg border border-[#008080]/20 bg-white shadow-sm
                  md:flex-row"
     >
       <div className="flex-1 p-4">
@@ -122,7 +126,7 @@ const CarResearchForm: React.FC = () => {
         />
       </div>
 
-      <div className="relative flex-1 border-t border-gray-300 p-4 md:border-l md:border-t-0">
+      <div className="relative flex-1 border-t border-[#008080]/20 p-4 md:border-l md:border-t-0">
         <CustomSelect
           label="Model"
           options={modelsByMake[selectedMake]}
@@ -131,7 +135,7 @@ const CarResearchForm: React.FC = () => {
         />
       </div>
 
-      <div className="relative flex-1 border-t border-gray-300 p-4 md:border-l md:border-t-0">
+      <div className="relative flex-1 border-t border-[#008080]/20 p-4 md:border-l md:border-t-0">
         <CustomSelect
           label="Year"
           options={years}
@@ -142,7 +146,7 @@ const CarResearchForm: React.FC = () => {
 
       <button
         type="submit"
-        className="cursor-pointer bg-[#008080] p-4 text-center text-white rounded-lg rounded-l-none font-bold transition-colors hover:bg-opacity-90 md:px-10"
+        className="cursor-pointer bg-[#18675E] p-4 text-center text-white rounded-lg rounded-l-none font-bold transition-all duration-200 hover:bg-[#008080] hover:text-white transform hover:scale-[1.02] active:scale-[0.98] shadow-sm hover:shadow-md md:px-10"
       >
         Search
       </button>

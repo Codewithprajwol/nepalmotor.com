@@ -3,64 +3,64 @@ import Link from "next/link";
 import { connectdb } from "@/lib/db";
 import { SellCar } from "@/model";
 
-// interface SellCarDetail {
-//   title: string;
-//   type: string;
-//   color: string;
-//   km: number;
-//   fuel: string;
-//   transmission: string;
-//   city: string;
-//   price: string;
-//   icon: string;
-// }
+interface SellCarDetail {
+  title: string;
+  type: string;
+  color: string;
+  km: number;
+  fuel: string;
+  transmission: string;
+  city: string;
+  price: string;
+  icon: string;
+}
 
-// const cars: SellCarDetail[] = [
-//   {
-//     title: "2019 Toyota Corolla",
-//     type: "Sedan",
-//     color: "White",
-//     km: 45000,
-//     fuel: "Petrol",
-//     transmission: "Automatic",
-//     city: "Kathmandu",
-//     price: "NPR 35,00,000",
-//     icon: "/carTypeImage/hyundai-i22.png",
-//   },
-//   {
-//     title: "2020 Honda CR-V",
-//     type: "SUV",
-//     color: "Silver",
-//     km: 32000,
-//     fuel: "Petrol",
-//     transmission: "Automatic",
-//     city: "Pokhara",
-//     price: "NPR 55,00,000",
-//     icon: "/carTypeImage/tata-nexon-ev.png",
-//   },
-//   {
-//     title: "2021 Hyundai Elantra",
-//     type: "Sedan",
-//     color: "Black",
-//     km: 28000,
-//     fuel: "Petrol",
-//     transmission: "Manual",
-//     city: "Lalitpur",
-//     price: "NPR 42,00,000",
-//     icon: "/carTypeImage/suzuki-brezza.png",
-//   },
-//   {
-//     title: "2022 Nissan Leaf",
-//     type: "Hatch",
-//     color: "Blue",
-//     km: 15000,
-//     fuel: "Electric",
-//     transmission: "Automatic",
-//     city: "Kathmandu",
-//     price: "NPR 48,00,000",
-//     icon: "/carTypeImage/hyundai-creta.png",
-//   },
-// ];
+const cars: SellCarDetail[] = [
+  {
+    title: "2019 Toyota Corolla",
+    type: "Sedan",
+    color: "White",
+    km: 45000,
+    fuel: "Petrol",
+    transmission: "Automatic",
+    city: "Kathmandu",
+    price: "NPR 35,00,000",
+    icon: "/carTypeImage/hyundai-i22.png",
+  },
+  {
+    title: "2020 Honda CR-V",
+    type: "SUV",
+    color: "Silver",
+    km: 32000,
+    fuel: "Petrol",
+    transmission: "Automatic",
+    city: "Pokhara",
+    price: "NPR 55,00,000",
+    icon: "/carTypeImage/tata-nexon-ev.png",
+  },
+  {
+    title: "2021 Hyundai Elantra",
+    type: "Sedan",
+    color: "Black",
+    km: 28000,
+    fuel: "Petrol",
+    transmission: "Manual",
+    city: "Lalitpur",
+    price: "NPR 42,00,000",
+    icon: "/carTypeImage/suzuki-brezza.png",
+  },
+  {
+    title: "2022 Nissan Leaf",
+    type: "Hatch",
+    color: "Blue",
+    km: 15000,
+    fuel: "Electric",
+    transmission: "Automatic",
+    city: "Kathmandu",
+    price: "NPR 48,00,000",
+    icon: "/carTypeImage/hyundai-creta.png",
+  },
+];
 
 
 export const dynamic = "force-dynamic"; 
@@ -82,6 +82,13 @@ const AvailableCars:React.FC= async () => {
               .populate('user', 'phone city');
 
 
+
+  // const { sellCarDetail } = await response.json();
+
+  // if (!Array.isArray(sellCarDetail)) {
+  //   console.error("sellCarDetail not found or not an array");
+  //   return <div>Failed to load cars.</div>;
+  // }
   return (
     <main className="min-h-screen bg-gray-100 text-gray-800">
       <section className="relative overflow-hidden py-20 px-4 sm:px-8 lg:px-16">
@@ -159,8 +166,6 @@ const AvailableCars:React.FC= async () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {sellCarDetail?.map((car:any) => (
-
-
             <div
               key={car._id}
               className="bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-cyan-400 hover:-translate-y-1 transition"
