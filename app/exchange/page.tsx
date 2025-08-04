@@ -213,9 +213,7 @@ const CustomSelect: FC<CustomSelectProps> = ({
   );
 };
 
-// --- Main Form Component ---
 
-// Define the shape of our form data
 interface FormDataState {
   fullName: string;
   email: string;
@@ -239,31 +237,8 @@ interface FormDataState {
   downpayment: number;
   finance: string;
   additionalInfo: string;
-  //  fullName:string
-  // email:string
-  // phone:string
-  // city:string
-  // vehicleModel:string
-  // accidents:string
-  // accidentInfo?:string
-  // additionalInfo?:string
-  // condition:string
-  // downpayment:Number
-  // expectedValuation:Number
-  // features:string
-  // finance:string
-  // fuelType:string
-  // kmDriven:Number
-  // makeYear:string
-  // newVehicleBrand:string
-  // newVehicleModel:string
-  // newVehiclePriceRange:string
-  // transmission:string
-  // vehicleColor:string
-  // vehicleType:string
 }
 
-// Define the initial state for the form
 const initialFormState: FormDataState = {
   fullName: "",
   email: "",
@@ -358,10 +333,10 @@ const VehicleValuationForm: FC = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    handleReset(); // Reset form when closing modal
+    handleReset(); 
   };
 
-  // Options for select dropdowns
+
   const cityOptions: OptionType[] = [
     { value: "Kathmandu", label: "Kathmandu" },
     { value: "Pokhara", label: "Pokhara" },
@@ -774,3 +749,5 @@ const VehicleValuationForm: FC = () => {
 };
 
 export default VehicleValuationForm;
+
+
