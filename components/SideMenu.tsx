@@ -26,8 +26,8 @@
     }
 
 
-    const SideMenu = ({ menuOpen, setMenuOpen }:SideMenuProps) => {
-      const [mounted, setMounted] = useState(false);
+  const SideMenu = ({ menuOpen, setMenuOpen }:SideMenuProps) => {
+  const [mounted, setMounted] = useState(false);
   const portalRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
